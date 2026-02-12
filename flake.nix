@@ -7,8 +7,15 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
 
     # Home manager
-    home-manager.url = "github:nix-community/home-manager/";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -31,6 +38,6 @@
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
-   
+
   };
 }
