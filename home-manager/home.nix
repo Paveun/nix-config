@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
@@ -15,6 +16,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
     ./zed.nix
+    ./fish.nix
   ];
 
   nixpkgs = {
@@ -57,10 +59,6 @@
     enable = true;
     enableInteractive = true;
     enableFishIntegration = true;
-  };
-
-  programs.fish = {
-    enable = true;
   };
 
   programs.ghostty = {

@@ -2,14 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.home-manager
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -26,7 +31,8 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.luks.devices."luks-8478ff39-fc65-4f22-bd47-930850d0e112".device = "/dev/disk/by-uuid/8478ff39-fc65-4f22-bd47-930850d0e112";
+  boot.initrd.luks.devices."luks-8478ff39-fc65-4f22-bd47-930850d0e112".device =
+    "/dev/disk/by-uuid/8478ff39-fc65-4f22-bd47-930850d0e112";
   networking.hostName = "razer"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -94,9 +100,13 @@
   users.users.paveun = {
     isNormalUser = true;
     description = "Paveun";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.fish;
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -113,8 +123,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
     git

@@ -1,0 +1,22 @@
+{
+  pkgs,
+  ...
+}:
+{
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting
+      ${pkgs.krabby}/bin/krabby random --no-title
+    '';
+    shellAliases = {
+      ssh = "TERM=xterm-256color command ssh";
+    };
+    plugins = [
+      {
+        name = "z";
+        src = pkgs.fishPlugins.z.src;
+      }
+    ];
+  };
+}
