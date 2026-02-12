@@ -17,6 +17,7 @@
     # ./nvim.nix
     ./zed.nix
     ./fish.nix
+    ./ghostty.nix
   ];
 
   nixpkgs = {
@@ -58,11 +59,6 @@
   programs.starship = {
     enable = true;
     enableInteractive = true;
-    enableFishIntegration = true;
-  };
-
-  programs.ghostty = {
-    enable = true;
     enableFishIntegration = true;
   };
 

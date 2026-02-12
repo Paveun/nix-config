@@ -1,14 +1,13 @@
+{ ... }:
 {
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
 
   programs.zed-editor = {
     enable = true;
-    extensions = [ "nix" "toml" "rust" ];
+    extensions = [
+      "nix"
+      "toml"
+      "rust"
+    ];
     userSettings = {
       theme = {
         mode = "system";
