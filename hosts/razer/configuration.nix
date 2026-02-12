@@ -119,6 +119,8 @@
     inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
     git
     gh
+    nil
+    nixd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
