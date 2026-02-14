@@ -69,8 +69,10 @@
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
 
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "paveun";
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "paveun";
+  };
 
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
@@ -139,6 +141,7 @@
     nil
     nixd
     gemini-cli
+    lazygit
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
