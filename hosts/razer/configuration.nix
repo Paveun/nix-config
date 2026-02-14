@@ -12,8 +12,9 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ./hardware-configuration.nix
+    ../../nixos/nh.nix
   ];
 
   home-manager = {
@@ -26,7 +27,10 @@
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
-  boot.loader.limine.enable = true;
+  boot.loader.limine = {
+    enable = true;
+    maxGenerations = 50;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
@@ -81,6 +85,37 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
+  };
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
+  boot.kernelParams = [
+    "nvidia-drm.fbdev=1"
+  ];
+  services.xserver.videoDrivers = [ "nvidia" ];
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  hardware = {
+    graphics = {
+      enable = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = true;
+      powerManagement.finegrained = false;
+      open = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+    };
+  };
+  hardware.nvidia.prime = {
+    # offload.enable = true;
+    # offload.enableOffloadCmd = true;
+    sync.enable = true;
+    nvidiaBusId = "PCI:1:0:0";
+    intelBusId = "PCI:0:2:0";
   };
 
   # Enable CUPS to print documents.
