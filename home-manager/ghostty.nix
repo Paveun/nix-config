@@ -7,7 +7,7 @@
     settings = {
       command = "${pkgs.fish}/bin/fish";
       theme = "catppuccin-mocha";
-      font-size = 12;
+      font-size = 10;
     };
     themes = {
       catppuccin-mocha = {
