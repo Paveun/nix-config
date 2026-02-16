@@ -20,5 +20,6 @@
     # waybar
     wayland
     # zathura
+    zed-editor
   ];
 }

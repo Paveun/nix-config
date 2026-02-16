@@ -35,7 +35,7 @@
           powerManagement.finegrained = false;
 
           # Use the NVidia open source kernel module
-          open = true;
+          # open = true; # laptop too old for this
 
           # Enable the Nvidia settings menu,
           # accessible via `nvidia-settings`.
