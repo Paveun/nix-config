@@ -39,10 +39,10 @@
             "application/pdf" = "org.pwmt.zathura.desktop";
 
             # Text
-            "text/html" = "firefox.desktop";
-            "text/xml" = "firefox.desktop";
-            "x-scheme-handler/http" = "firefox.desktop";
-            "x-scheme-handler/https" = "firefox.desktop";
+            "text/html" = "zen.desktop";
+            "text/xml" = "zen.desktop";
+            "x-scheme-handler/http" = "zen.desktop";
+            "x-scheme-handler/https" = "zen.desktop";
 
             # Images
             "image/gif" = "org.gnome.gThumb.desktop";
