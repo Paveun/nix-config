@@ -3,7 +3,7 @@
     { pkgs, config, ... }:
     {
       # PROPRIERARY DRIVER #######################################################################
-      nixpkgs.config.cudaSupport = true;
+      # nixpkgs.config.cudaSupport = true;
       services.xserver.videoDrivers = [ "nvidia" ];
       environment.systemPackages = [ pkgs.nvtopPackages.nvidia ];
       # programs.sway.package = pkgs.sway.override { extraOptions = [ "--unsupported-gpu" ]; };

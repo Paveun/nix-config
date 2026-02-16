@@ -2,7 +2,6 @@
 {
   nixosHosts.razer = {
     unstable = true;
-    primaryUser = "paveun";
 
     modules = [
       ./_nixos

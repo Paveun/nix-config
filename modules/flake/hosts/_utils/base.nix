@@ -28,7 +28,7 @@ in
 
     primaryUser = mkOption {
       type = types.str;
-      default = "gaetan";
+      default = "paveun";
     };
 
     specialArgs = mkOption {
