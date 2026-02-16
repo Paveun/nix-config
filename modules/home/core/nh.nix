@@ -9,7 +9,7 @@
       programs.nh = {
         enable = true;
 
-        flake = "github:GaetanLepage/nix-config";
+        flake = "/home/paveun/nix-config";
 
         clean = {
           enable = true;
