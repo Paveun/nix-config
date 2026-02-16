@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.core = {
+  flake.modules.homeManager.core = { pkgs, ... }: {
     programs = {
       git = {
         enable = true;
@@ -9,6 +9,8 @@
             email = "a.tresierrajansen@gmail.com";
             name = "Paveun";
           };
+
+          credential.helper = "!${pkgs.gh}/bin/gh auth git-credential";
 
           core.editor = "nvim";
           github.user = "Paveun";
