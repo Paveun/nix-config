@@ -17,6 +17,7 @@
         losslesscut-bin
         spotify
         slack
+        google-chrome
       ];
     };
 }
