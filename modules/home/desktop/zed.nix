@@ -1,26 +1,27 @@
 {
   flake.modules.homeManager.zed-editor =
-    { pkgs, ... }: {
-    programs.zed-editor = {
-      enable = true;
-      extensions = [
-        "nix"
-        "toml"
-        "rust"
-      ];
-      userSettings = {
-        theme = {
-          mode = "system";
-          dark = "One Dark";
-          light = "One Light";
+    { pkgs, ... }:
+    {
+      programs.zed-editor = {
+        enable = true;
+        extensions = [
+          "nix"
+          "toml"
+          "rust"
+        ];
+        userSettings = {
+          # theme = {
+          #   mode = "system";
+          #   dark = "One Dark";
+          #   light = "One Light";
+          # };
+          hour_format = "hour12";
+          # vim_mode = true;
         };
-        hour_format = "hour12";
-        # vim_mode = true;
       };
+      home.packages = with pkgs; [
+        nil
+        nixd
+      ];
     };
-    home.packages = with pkgs; [
-      nil
-      nixd
-    ];
-  };
 }

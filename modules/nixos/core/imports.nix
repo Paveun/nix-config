@@ -9,5 +9,6 @@
     # ssh-server
     users
     # wireguard-client
+    catppuccin
   ];
 }

@@ -6,5 +6,6 @@
     nix-index-database
     nh
     xdg
+    catppuccin
   ];
 }

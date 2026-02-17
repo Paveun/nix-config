@@ -16,7 +16,7 @@
   ];
 
   programs.nixvim = {
-    colorschemes.gruvbox.enable = true;
+    colorschemes.catppuccin.enable = true;
 
     plugins = {
       # Lazy loading

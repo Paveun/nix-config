@@ -16,7 +16,7 @@
         pane_frames = false;
         default_layout = "compact";
 
-        theme = "gruvbox-dark";
+        # theme = "gruvbox-dark";
 
         keybinds = {
           normal = {
