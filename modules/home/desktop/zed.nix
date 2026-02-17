@@ -1,5 +1,6 @@
 {
-  flake.modules.homeManager.zed-editor = {
+  flake.modules.homeManager.zed-editor =
+    { pkgs, ... }: {
     programs.zed-editor = {
       enable = true;
       extensions = [
@@ -17,5 +18,9 @@
         # vim_mode = true;
       };
     };
+    home.packages = with pkgs; [
+      nil
+      nixd
+    ];
   };
 }

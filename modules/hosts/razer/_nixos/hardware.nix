@@ -26,6 +26,8 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.initrd.luks.devices."luks-8478ff39-fc65-4f22-bd47-930850d0e112".device =
+      "/dev/disk/by-uuid/8478ff39-fc65-4f22-bd47-930850d0e112";
 
   fileSystems."/" = {
     device = "/dev/mapper/luks-7b503347-0069-4322-a287-eb9ee50a3cff";
