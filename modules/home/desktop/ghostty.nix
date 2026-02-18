@@ -13,6 +13,10 @@
           command = "${pkgs.fish}/bin/fish";
           theme = "catppuccin-mocha";
           font-size = 10;
+          window-padding-x = 14;
+          window-padding-y = 14;
+          background-opacity = 0.95;
+          window-decoration = "none";
         };
         themes = {
           catppuccin-mocha = {

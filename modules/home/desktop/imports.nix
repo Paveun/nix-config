@@ -12,16 +12,18 @@
     # gtk
     # kanshi
     keyring
-    # wofi
+    wofi
     # streaming
     # sway
     # swaylock
-    # udiskie
-    # waybar
+    udiskie
+    waybar
     wayland
     # zathura
     zed-editor
     # walker
-    # rofi
+    gazelle
+    wofi
+    hyprland
   ];
 }

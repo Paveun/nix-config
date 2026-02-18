@@ -45,6 +45,8 @@
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
+
+    gazelle.url = "github:Zeus-Deus/gazelle-tui";
   };
 
   outputs =

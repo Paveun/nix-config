@@ -32,7 +32,7 @@
           window {
             margin: 0px;
             padding: 20px;
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
             opacity: 0.95;
           }
 
@@ -40,28 +40,28 @@
             margin: 0;
             padding: 0;
             border: none;
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
           }
 
           #outer-box {
             margin: 0;
             padding: 20px;
             border: none;
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
           }
 
           #scroll {
             margin: 0;
             padding: 0;
             border: none;
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
           }
 
           #input {
             margin: 0;
             padding: 10px;
             border: none;
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
             color: @text;
           }
 
@@ -74,11 +74,11 @@
           #text {
             margin: 5px;
             border: none;
-            /* color: #${config.colorScheme.palette.base06}; */
+            color: #f5e0dc;
           }
 
           #entry {
-            /* background-color: #${config.colorScheme.palette.base00}; */
+            background-color: #1e1e2e;
           }
 
           #entry:selected {
@@ -87,7 +87,7 @@
           }
 
           #entry:selected #text {
-            /* color: #${config.colorScheme.palette.base02}; */
+            color: #313244;
           }
 
           #entry image {

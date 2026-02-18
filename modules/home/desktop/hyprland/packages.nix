@@ -2,8 +2,6 @@
   flake.modules.homeManager.hyprland =
     {
       pkgs,
-      config,
-      lib,
       ...
     }:
     {

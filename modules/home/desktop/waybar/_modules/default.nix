@@ -55,14 +55,13 @@
     tooltip-format-disconnected = "Disconnected";
     interval = 3;
     nospacing = 1;
-    on-click = "ghostty -e nmcli";
+    on-click = "ghostty -e nmcli &";
   };
   battery = {
-    interval = 5;
     format = "{capacity}% {icon}";
     format-discharging = "{icon}";
     format-charging = "{icon}";
-    format-plugged = "";
+    format-plugged = "";
     format-icons = {
       charging = [
         "󰢜"
@@ -89,9 +88,11 @@
         "󰁹"
       ];
     };
-    format-full = "Charged ";
+    format-full = "󰂅";
     tooltip-format-discharging = "{power:>1.0f}W↓ {capacity}%";
     tooltip-format-charging = "{power:>1.0f}W↑ {capacity}%";
+    interval = 5;
+    # "on-click": "omarchy-menu power",
     states = {
       warning = 20;
       critical = 10;
@@ -106,7 +107,7 @@
   };
   wireplumber = {
     # Changed from "pulseaudio"
-    "format" = "";
+    format = "";
     format-muted = "󰝟";
     scroll-step = 5;
     on-click = "pavucontrol";

@@ -16,13 +16,17 @@
       #   # TODO: disable when possible
       #   xwayland.enable = true;
       # };
-      services.desktopManager.gnome.enable = true;
+      programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+      };
+      # services.desktopManager.gnome.enable = true;
 
       fonts.packages = with pkgs; [
         noto-fonts
         nerd-fonts.dejavu-sans-mono
         nerd-fonts.ubuntu-mono
-        nerd-fonts.cascadia-mono
+        nerd-fonts.caskaydia-mono
       ];
 
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -36,7 +40,7 @@
       };
 
       services = {
-        displayManager.defaultSession = "gnome";
+        displayManager.defaultSession = "hyprland";
 
         libinput.enable = true;
         xserver.xkb.layout = "us";

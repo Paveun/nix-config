@@ -1,11 +1,5 @@
 {
-  flake.modules.homeManager.hyprland =
-  {
-    config,
-    pkgs,
-    ...
-  }:
-  {
+  flake.modules.homeManager.hyprland = {
     wayland.windowManager.hyprland.settings = {
       general = {
         gaps_in = 5;

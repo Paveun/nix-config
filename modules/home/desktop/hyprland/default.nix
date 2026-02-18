@@ -1,6 +1,6 @@
 {
   flake.modules.homeManager.hyprland =
-    { pkgs, ... }:
+    { lib, ... }:
     {
       wayland.windowManager.hyprland = {
         enable = true;
@@ -13,7 +13,7 @@
           "$messenger" = lib.mkDefault "signal-desktop";
           "$webapp" = lib.mkDefault "$browser --app";
 
-          monitor = cfg.monitors;
+          # monitor = cfg.monitors;
         };
       };
     };
