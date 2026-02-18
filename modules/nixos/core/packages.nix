@@ -17,6 +17,7 @@
         unzip
         wget
         zip
+        fastfetch
 
         # Network
         dig # Domain name server
