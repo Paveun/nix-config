@@ -8,7 +8,7 @@
     {
       imports = [ inputs.gazelle.homeModules.gazelle ];
       home.packages = [
-        inputs.gazelle.packages.${pkgs.system}.default
+        inputs.gazelle.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
       programs.gazelle = {
         enable = true;
