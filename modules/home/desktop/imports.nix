@@ -21,6 +21,7 @@
     wayland
     # zathura
     zed-editor
-    walker
+    # walker
+    # rofi
   ];
 }
