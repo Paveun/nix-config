@@ -1,6 +1,6 @@
 {
   flake.modules.nixos.display-manager =
-    { pkgs, ... }:
+    # { pkgs, ... }:
     # let
     #   themePackage = pkgs.elegant-sddm.override {
     #     themeConfig.General.background = pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath;
