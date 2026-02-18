@@ -2,16 +2,20 @@
   flake.modules.homeManager.hyprland =
     { primaryUser, ... }:
     let
-      wallpaperPath = "/home/${primaryUser}/.config/wallpaper.jpeg";
+      wallpaperRelPath = ".config/wallpaper.jpeg";
+      wallpaperPath = "/home/${primaryUser}/${wallpaperRelPath}";
     in
     {
-      home.file."${wallpaperPath}".source = ../wallpaper.jpeg;
+      home.file."${wallpaperRelPath}".source = ../wallpaper.jpeg;
 
       services.hyprpaper = {
         enable = true;
         settings = {
           preload = [ wallpaperPath ];
-          wallpaper = [ ",${wallpaperPath}" ];
+          wallpaper = {
+            monitor = "";
+            path = "${wallpaperPath}";
+          };
         };
       };
     };
