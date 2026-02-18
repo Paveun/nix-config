@@ -6,6 +6,7 @@
     obs
     printing
     sound
+    elephant
     # thunar
   ];
 }

@@ -21,5 +21,6 @@
     wayland
     # zathura
     zed-editor
+    walker
   ];
 }
