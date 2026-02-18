@@ -13,7 +13,7 @@
     ]);
 
     homeManagerModules = [
-      ./_home.nix
+      ./_home
     ]
     ++ (with config.flake.modules.homeManager; [
       desktop

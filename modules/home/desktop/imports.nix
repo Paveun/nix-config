@@ -10,7 +10,7 @@
     foot
     # gammastep
     # gtk
-    # kanshi
+    kanshi
     keyring
     wofi
     # streaming

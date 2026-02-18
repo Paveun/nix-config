@@ -9,6 +9,7 @@
           # "swaybg -i ~/.config/omarchy/current/background -m fill"
           "systemctl --user import-environment"
           "${lib.getExe pkgs.hyprsunset}"
+          "${lib.getExe pkgs.kanshi}"
           "systemctl --user start hyprpolkitagent"
           "wl-clip-persist --clipboard regular & clipse -listen"
 
