@@ -16,6 +16,9 @@
           #   light = "One Light";
           # };
           hour_format = "hour12";
+          features = {
+            edit_prediction_provider = "copilot";
+          };
           # vim_mode = true;
         };
       };
