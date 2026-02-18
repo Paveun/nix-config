@@ -1,9 +1,4 @@
 {
-  lib,
-  pkgs,
-  config,
-}:
-{
   "hyprland/workspaces" = {
     on-click = "activate";
     format = "{icon}";
