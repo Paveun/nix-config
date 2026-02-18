@@ -12,8 +12,9 @@
         };
         background = {
           monitor = "";
-          # path = ../wallpaper.jpeg;
-          # blur_passes = 3;
+          path = "screenshot";
+          blur_passes = 3;
+          blur_size = 8;
           # brightness = 0.5;
         };
 
