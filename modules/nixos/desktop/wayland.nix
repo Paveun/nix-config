@@ -22,6 +22,7 @@
         noto-fonts
         nerd-fonts.dejavu-sans-mono
         nerd-fonts.ubuntu-mono
+        nerd-fonts.cascadia-mono
       ];
 
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
