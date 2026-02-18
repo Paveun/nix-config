@@ -17,7 +17,7 @@
           };
           background = {
             monitor = "";
-            path = ../wallpaper.jpeg;
+            # path = ../wallpaper.jpeg;
             # blur_passes = 3;
             # brightness = 0.5;
           };
