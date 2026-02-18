@@ -17,24 +17,27 @@
 
         settings.main = {
           layer = "top";
-          position = "bottom";
-          height = 32;
+          position = "top";
+          height = 26;
+          spacing = 0;
 
-          fixed-center = false;
+          # fixed-center = false;
 
-          modules-center = [ "custom/spotify" ];
-          modules-right = [
-            "backlight"
-            "pulseaudio"
-            "memory"
-            "cpu"
-            "network"
-            "battery"
+          modules-left = [
+            "hyprland/workspaces"
+          ];
+          modules-center = [
             "clock"
-            "clock#date"
-            "custom/notifs"
-
+          ];
+          modules-right = [
+            # "custom/dropbox"
             "tray"
+            "bluetooth"
+            "network"
+            "wireplumber"
+            "cpu"
+            "power-profiles-daemon"
+            "battery"
           ];
         }
         // (import ./_modules { inherit lib config pkgs; });
