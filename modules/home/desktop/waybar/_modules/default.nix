@@ -8,7 +8,7 @@
     on-click = "activate";
     format = "{icon}";
     format-icons = {
-      default = "";
+      default = "";
       "1" = "1";
       "2" = "2";
       "3" = "3";
@@ -32,6 +32,7 @@
     interval = 5;
     format = "󰍛";
     on-click = "ghostty -e btop";
+    on-right-click = "ghostty";
   };
   clock = {
     format = "{:%A %I:%M %p}";
@@ -100,23 +101,54 @@
   };
   bluetooth = {
     format = "󰂯";
-    format-disabled = "󰂲";
-    format-connected = "";
+    format-off = "󰂲";
+    format-disaled = "󰂲";
+    format-connected = "󰂱";
+    format-no-controller = "";
     tooltip-format = "Devices connected: {num_connections}";
     on-click = "blueberry";
   };
+  "group/tray-expander" = {
+    orientation = "inherit";
+    drawer = {
+      transition-duration = 600;
+      children-class = "tray-group-item";
+    };
+    modules = [
+      "custom/expand-icon"
+      "tray"
+    ];
+  };
+  "custom/expand-icon" = {
+    format = "";
+    tooltip = false;
+    on-scroll-up = "";
+    on-scroll-down = "";
+    on-scroll-left = "";
+    on-scroll-right = "";
+  };
   wireplumber = {
     # Changed from "pulseaudio"
-    format = "";
-    format-muted = "󰝟";
-    scroll-step = 5;
+    format = "{icon}";
+    format-muted = "";
+    scroll-step = 1;
     on-click = "pavucontrol";
     tooltip-format = "Playing at {volume}%";
     on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
-    max-volume = 150; # Optional: allow volume over 100%
+    max-volume = 100; # Optional: allow volume over 100%
+    format-icons = {
+      headphone = "";
+      headset = "";
+      default = [
+        ""
+        ""
+        ""
+      ];
+    };
   };
   tray = {
-    spacing = 13;
+    icon-size = 12;
+    spacing = 17;
   };
   power-profiles-daemon = {
     format = "{icon}";

@@ -16,6 +16,7 @@
         enable = true;
 
         settings.main = {
+          reload_style_on_change = true;
           layer = "top";
           position = "top";
           height = 26;
@@ -31,12 +32,12 @@
           ];
           modules-right = [
             # "custom/dropbox"
-            "tray"
+            "group/tray-expander"
             "bluetooth"
             "network"
             "wireplumber"
             "cpu"
-            "power-profiles-daemon"
+            # "power-profiles-daemon"
             "battery"
           ];
         }
