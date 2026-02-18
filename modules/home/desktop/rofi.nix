@@ -1,12 +1,15 @@
 {
-  flake.modules.homeManager.rofi =
+  flake.modules.homeManager.wofi =
     { pkgs, ... }:
     {
-      programs.rofi = {
+      programs.wofi = {
         enable = true;
 
-        font = "DejaVu Sans Mono 18";
-        # theme = "gruvbox-dark";
+        # style = ''
+        #   * {
+        #       font-family: monospace;
+        #   }
+        # '';
       };
     };
 }

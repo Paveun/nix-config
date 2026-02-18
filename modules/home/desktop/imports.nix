@@ -12,7 +12,7 @@
     # gtk
     # kanshi
     keyring
-    # rofi
+    # wofi
     # streaming
     # sway
     # swaylock
