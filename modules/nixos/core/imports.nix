@@ -10,5 +10,6 @@
     users
     # wireguard-client
     catppuccin
+    tailscale
   ];
 }
