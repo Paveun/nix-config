@@ -67,7 +67,9 @@
 
       layerrule = [
         # Proper background blur for wofi
-        "blur on, match:namespace wofi"
+        "blur off, match:namespace wofi"
+        "ignore_alpha off, match:namespace wofi"
+        "animation fade, match:namespace wofi"
         "blur on, match:namespace waybar"
       ];
     };

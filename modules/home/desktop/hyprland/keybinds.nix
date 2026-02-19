@@ -34,7 +34,7 @@
             "$mod SHIFT, n, exec, ${dunst} set-paused true"
             # Applications
             "$mod, return, exec, ${ghostty}"
-            "$mod, space, exec, ${wofi} --show drun --sort-order=alphabetical"
+            "$mod, space, exec, ${wofi} --show drun"
             "$mod SHIFT, SPACE, exec, pkill -SIGUSR1 waybar"
             # Window Management
             "$mod, W, killactive,"

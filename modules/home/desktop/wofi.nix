@@ -33,7 +33,6 @@
             margin: 0px;
             padding: 20px;
             background-color: #1e1e2e;
-            opacity: 0.95;
           }
 
           #inner-box {
