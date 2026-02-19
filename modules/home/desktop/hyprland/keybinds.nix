@@ -12,7 +12,9 @@
           mod = "SUPER";
 
           inherit (lib) getExe getExe';
-          dunst = getExe config.services.dunst.package;
+          # dunst = getExe config.services.dunst.package;
+          dunstctl = getExe' config.services.dunst.package "dunstctl";
+          notify-send = getExe' pkgs.libnotify "notify-send";
           ghostty = getExe config.programs.ghostty.package;
           # light = getExe pkgs.light;
           pactl = getExe' pkgs.pulseaudio "pactl";
@@ -23,11 +25,20 @@
           hyprlock = getExe config.programs.hyprlock.package;
           brightnessctl = getExe pkgs.brightnessctl;
           # hyprctl = getExe' config.wayland.windowManager.hyprland.package "hyprctl";
-
-          pauseNotifications = "notify-send 'Notifications Paused' && ${dunst} set-paused true";
-          unpauseNotifications = "notify-send 'Notifications Resumed' && ${dunst} set-paused false";
-          # toggle notificaitons and send a notification reflexting the new state
-          toggleNotifications = "if ${dunst} is-paused; then ${unpauseNotifications}; else ${pauseNotifications}; fi";
+          #
+          # pauseNotifications = "${dunstctl} set-paused true && notify-send 'Notifications Paused'";
+          unpauseNotifications = "${dunstctl} set-paused false && ${notify-send} -u low '󰂚 Notifications' 'Enabled'";
+          toggleNotifications = pkgs.writeShellScriptBin "toggle-notifications" ''
+            TAG="string:x-dunst-stack-tag:notifications_status"
+            if [ "$(${dunstctl} is-paused)" = "true" ]; then
+              ${dunstctl} set-paused false
+              ${notify-send} -h "$TAG" -u low "󰂚 Notifications" "Enabled"
+            else
+              ${notify-send} -h "$TAG" -u low "󰂛 Notifications" "Paused"
+              sleep 1
+              ${dunstctl} set-paused true
+            fi
+          '';
         in
         {
           "$mod" = mod;
@@ -37,7 +48,7 @@
             "$mod, Escape, exec, ${hyprlock}"
             "$mod, Print, exec, grimblast copy area"
             # Dunst (notifications)
-            "$mod, n, exec, ${toggleNotifications}"
+            "$mod, n, exec, ${getExe toggleNotifications}"
             "$mod SHIFT, n, exec, ${unpauseNotifications}"
             # Applications
             "$mod, return, exec, ${ghostty}"
