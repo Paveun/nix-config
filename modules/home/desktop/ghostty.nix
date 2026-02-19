@@ -17,6 +17,7 @@
           window-padding-y = 14;
           background-opacity = 0.95;
           window-decoration = "none";
+          resize-overlay = "never";
         };
         themes = {
           catppuccin-mocha = {
