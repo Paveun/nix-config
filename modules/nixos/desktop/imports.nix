@@ -8,5 +8,6 @@
     sound
     elephant
     thunar
+    protonvpn
   ];
 }
