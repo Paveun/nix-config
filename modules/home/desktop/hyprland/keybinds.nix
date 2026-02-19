@@ -20,18 +20,25 @@
           wofi = getExe config.programs.wofi.package;
           hyprshot = getExe pkgs.hyprshot;
           hyprpicker = getExe pkgs.hyprpicker;
+          hyprlock = getExe config.programs.hyprlock.package;
           brightnessctl = getExe pkgs.brightnessctl;
           # hyprctl = getExe' config.wayland.windowManager.hyprland.package "hyprctl";
+
+          pauseNotifications = "notify-send 'Notifications Paused' && ${dunst} set-paused true";
+          unpauseNotifications = "notify-send 'Notifications Resumed' && ${dunst} set-paused false";
+          # toggle notificaitons and send a notification reflexting the new state
+          toggleNotifications = "if ${dunst} is-paused; then ${unpauseNotifications}; else ${pauseNotifications}; fi";
         in
         {
           "$mod" = mod;
           bind = [
 
-            "$mod, F, exec, firefox"
+            "$mod, F, exec, thunar"
+            "$mod, Escape, exec, ${hyprlock}"
             "$mod, Print, exec, grimblast copy area"
             # Dunst (notifications)
-            "$mod, n, exec, ${dunst} set-paused false"
-            "$mod SHIFT, n, exec, ${dunst} set-paused true"
+            "$mod, n, exec, ${toggleNotifications}"
+            "$mod SHIFT, n, exec, ${unpauseNotifications}"
             # Applications
             "$mod, return, exec, ${ghostty}"
             "$mod, space, exec, ${wofi} --show drun"
