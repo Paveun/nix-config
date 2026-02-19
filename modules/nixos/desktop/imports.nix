@@ -7,6 +7,6 @@
     printing
     sound
     elephant
-    # thunar
+    thunar
   ];
 }
