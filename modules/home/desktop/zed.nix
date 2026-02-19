@@ -15,9 +15,9 @@
           #   dark = "One Dark";
           #   light = "One Light";
           # };
-          hour_format = "hour12";
-          features = {
-            edit_prediction_provider = "copilot";
+          # hour_format = "hour12";
+          edit_predictions = {
+            provider = "copilot";
           };
           # vim_mode = true;
         };
