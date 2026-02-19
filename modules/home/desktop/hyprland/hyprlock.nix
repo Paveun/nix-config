@@ -25,15 +25,15 @@
           halign = "center";
           valign = "center";
 
-          # inner_color = surfaceRgb;
-          # outer_color = foregroundRgb; # #d3c6aa
+          inner_color = "rgb(30, 30, 46)";
+          outer_color = "rgb(245, 224, 220)"; # #d3c6aa
           outline_thickness = 4;
 
-          font_family = "CaskaydiaMono Nerd Font";
+          font_family = "JetbrainsMono Nerd Font";
           font_size = 32;
-          # font_color = foregroundRgb;
+          font_color = "rgb(205, 214, 244)";
 
-          # placeholder_color = foregroundMutedRgb;
+          placeholder_color = "rgb(166, 173, 200)";
           placeholder_text = "  Enter Password 󰈷 ";
           check_color = "rgba(131, 192, 146, 1.0)";
           fail_text = "Wrong";
