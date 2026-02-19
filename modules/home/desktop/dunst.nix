@@ -20,13 +20,13 @@
             # dynamic width from 0 to 300
             # width = (0, 300)
             # constant width of 300
-            width = "(0, 800)";
+            width = "(350, 800)";
 
             # The maximum height of a single notification, excluding the frame.
             height = 300;
 
             # Offset from the origin
-            offset = "10x50";
+            offset = "15x15";
 
             # Horizontal padding.
             horizontal_padding = 10;
@@ -34,7 +34,7 @@
             # Defines color of the frame around the notification window.
             # frame_color = "#ebdbb2";
 
-            font = "DejaVu Sans 16";
+            font = "DejaVu Sans 11";
 
             format = "%s %p\\n%b";
 
