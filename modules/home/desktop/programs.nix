@@ -18,6 +18,7 @@
         spotify
         slack
         google-chrome
+        gemini-cli
       ];
     };
 }
