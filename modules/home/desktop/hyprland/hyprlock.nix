@@ -12,7 +12,8 @@
         };
         background = {
           monitor = "";
-          path = "screenshot";
+          # path = "screenshot";
+          path = "${../wallpaper.jpeg}";
           blur_passes = 3;
           blur_size = 8;
           # brightness = 0.5;
@@ -49,7 +50,7 @@
           text_align = "center";
           color = "rgb(211, 198, 170)";
           font_size = 24;
-          font_family = "CaskaydiaMono Nerd Font";
+          font_family = "JetbrainsMono Nerd Font";
           position = "0, -100";
           halign = "center";
           valign = "center";
