@@ -8,6 +8,7 @@
     firefox
     flameshot
     foot
+    discord
     # gammastep
     # gtk
     kanshi

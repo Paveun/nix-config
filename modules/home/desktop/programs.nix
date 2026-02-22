@@ -7,7 +7,7 @@
       home.packages = with pkgs; [
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         # IM
-        discord
+        # discord
         # signal-desktop
 
         # Office / productivity
