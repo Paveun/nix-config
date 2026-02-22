@@ -15,8 +15,8 @@
           # path = "screenshot";
           path = "${../wallpaper.jpeg}";
           blur_passes = 3;
-          blur_size = 8;
-          # brightness = 0.5;
+          blur_size = 4;
+          brightness = 0.5;
         };
 
         input-field = {
