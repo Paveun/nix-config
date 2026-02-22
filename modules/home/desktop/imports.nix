@@ -10,7 +10,7 @@
     foot
     discord
     # gammastep
-    # gtk
+    gtk
     kanshi
     keyring
     wofi

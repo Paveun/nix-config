@@ -2,6 +2,7 @@
   flake.modules.homeManager.gtk =
     {
       pkgs,
+      lib,
       config,
       ...
     }:
@@ -13,6 +14,7 @@
     in
     {
       home.pointerCursor = {
+        gtk.enable = true;
         enable = true;
         inherit (cursorTheme)
           name
@@ -31,18 +33,18 @@
 
         font = {
           name = "DejaVu Sans";
-          size = 12;
+          size = 11;
         };
 
         theme = {
-          name = "Matcha-dark-aliz";
-          package = pkgs.matcha-gtk-theme;
+          name = "rose-pine-gtk";
+          package = pkgs.rose-pine-gtk-theme;
         };
 
-        iconTheme = {
-          name = "Papirus-Dark";
-          package = pkgs.papirus-icon-theme;
-        };
+        # iconTheme = {
+        #   name = "Papirus-Dark";
+        #   package = pkgs.papirus-icon-theme;
+        # };
 
         inherit cursorTheme;
 
