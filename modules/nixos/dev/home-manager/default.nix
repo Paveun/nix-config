@@ -12,6 +12,7 @@ flakeArgs: {
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
+        backupFileExtension = "bak";
 
         users.${primaryUser}.imports = [
           flakeArgs.config.flake.modules.homeManager.core
