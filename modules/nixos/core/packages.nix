@@ -17,6 +17,7 @@
         unzip
         wget
         zip
+        just
         fastfetch
 
         # Network
