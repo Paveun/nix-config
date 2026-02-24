@@ -2,7 +2,7 @@
   flake.modules.homeManager.hyprland =
     { primaryUser, ... }:
     let
-      wallpaperRelPath = ".config/wallpaper.jpeg";
+      wallpaperRelPath = ".config/wallpaper.png";
       wallpaperPath = "/home/${primaryUser}/${wallpaperRelPath}";
     in
     {
