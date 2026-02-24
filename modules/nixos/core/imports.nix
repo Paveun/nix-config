@@ -11,6 +11,5 @@
     # wireguard-client
     catppuccin
     tailscale
-    containers
   ];
 }

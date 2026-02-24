@@ -9,5 +9,6 @@
     elephant
     thunar
     protonvpn
+    containers
   ];
 }
