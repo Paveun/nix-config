@@ -7,10 +7,10 @@
       ...
     }:
     {
-      services = {
-        blueman-applet.enable = true;
-        network-manager-applet.enable = true;
-      };
+      # services = {
+      #   blueman-applet.enable = true;
+      #   network-manager-applet.enable = true;
+      # };
 
       programs.waybar = {
         enable = true;
@@ -33,12 +33,13 @@
           modules-right = [
             # "custom/dropbox"
             "group/tray-expander"
-            "bluetooth"
             "network"
+            "bluetooth"
             "wireplumber"
+            "backlight"
+            "battery"
             "cpu"
             # "power-profiles-daemon"
-            "battery"
           ];
         }
         // (import ./_modules { inherit lib config pkgs; });

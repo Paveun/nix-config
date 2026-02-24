@@ -107,7 +107,7 @@
     format-connected = "󰂱";
     format-no-controller = "";
     tooltip-format = "Devices connected: {num_connections}";
-    on-click = "blueberry";
+    on-click = lib.getExe' pkgs.blueberry "blueberry";
   };
   "group/tray-expander" = {
     orientation = "inherit";
@@ -160,6 +160,20 @@
       balanced = "󰊚";
       performance = "󰡴";
     };
+  };
+  backlight = {
+    format = "{icon} {percent}%";
+    format-icons = [
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+      ""
+    ];
   };
   # "custom/dropbox" = {
   #   format = "";

@@ -11,6 +11,7 @@
 /*window#waybar {
     background-color: transparent;
 }*/
+
 .modules-left {
     margin-left: 8px;
 }
@@ -30,16 +31,14 @@
     opacity: 0.5;
 }
 
-#workspaces {
+/*#workspaces {
     margin-left: 7px;
-}
+}*/
+
 #cpu,
 #battery,
-#pulseaudio,
 #wireplumber,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
+#backlight {
     min-width: 12px;
     margin: 0 7.5px;
 }
@@ -49,11 +48,11 @@
 }
 
 #bluetooth {
-    margin-right: 17px;
+    margin-right: 9px;
 }
 
 #network {
-    margin-right: 13px;
+    margin-right: 20px;
 }
 
 #custom-expand-icon {
