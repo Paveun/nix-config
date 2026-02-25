@@ -23,6 +23,8 @@
           nixos-anywhere
           tlrc
           wget
+          nil
+          nixd
 
           # Network
           dig
