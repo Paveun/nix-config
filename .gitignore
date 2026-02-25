@@ -1,0 +1,5 @@
+# Output of the Nix flake build
+result
+
+.direnv/
+.DS_Store
