@@ -9,6 +9,11 @@
       programs.fish = {
         enable = true;
 
+        shellInit = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin ''
+          # Nix paths
+          fish_add_path --move --prepend --path $HOME/.nix-profile/bin /nix/var/nix/profiles/default/bin $HOME/.local/state/nix/profile/bin
+        '';
+
         interactiveShellInit = ''
           ${lib.getExe pkgs.pfetch}
 

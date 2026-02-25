@@ -45,7 +45,7 @@ in
 
                     nix.package = pkgs.nix;
 
-                    age.identityPaths = [ "${config.home.homeDirectory}/.ssh/agenix" ];
+                    # age.identityPaths = [ "${config.home.homeDirectory}/.ssh/agenix" ];
                   }
                 )
               ];
