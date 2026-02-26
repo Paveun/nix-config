@@ -1,10 +1,10 @@
 {
   flake.modules.homeManager.niri = {
     programs.niri.settings.layout = {
-      focus-ring = {
-        enable = true;
-        width = 2;
-      };
+      # focus-ring = {
+      #   enable = true;
+      #   width = 2;
+      # };
 
       gaps = 16; # Gap between windows
       center-focused-column = "never"; # Don’t auto-center focused column

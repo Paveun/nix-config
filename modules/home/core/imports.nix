@@ -6,6 +6,7 @@
     nix-index-database
     nh
     xdg
-    catppuccin
+    stylix
+    # catppuccin
   ];
 }

@@ -9,7 +9,8 @@
     # ssh-server
     users
     # wireguard-client
-    catppuccin
+    stylix
+    # catppuccin
     tailscale
   ];
 }

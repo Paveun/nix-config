@@ -25,6 +25,11 @@ let
       publicKey = "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=";
       priority = 5;
     }
+    {
+      url = "https://niri.cachix.org";
+      publicKey = "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=";
+      priority = 6;
+    }
     # {
     #   url = "https://cache.jonringer.us";
     #   publicKey = "cache.jonringer.us:BZogIwFAp94LYcmaOi6xkHGJeRhMcQtFO8l6AmJNsng=";

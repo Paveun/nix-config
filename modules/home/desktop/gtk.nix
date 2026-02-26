@@ -13,11 +13,11 @@
       };
     in
     {
-      dconf.settings = {
-        "org/gnome/desktop/interface" = {
-          color-scheme = "prefer-dark";
-        };
-      };
+      # dconf.settings = {
+      #   "org/gnome/desktop/interface" = {
+      #     color-scheme = "prefer-dark";
+      #   };
+      # };
       home.pointerCursor = {
         gtk.enable = true;
         enable = true;
@@ -36,15 +36,15 @@
       gtk = {
         enable = true;
 
-        font = {
-          name = "DejaVu Sans";
-          size = 11;
-        };
+        # font = {
+        #   name = "DejaVu Sans";
+        #   size = 11;
+        # };
 
-        theme = {
-          name = "rose-pine";
-          package = pkgs.rose-pine-gtk-theme;
-        };
+        # theme = {
+        #   name = "rose-pine";
+        #   package = pkgs.rose-pine-gtk-theme;
+        # };
 
         # iconTheme = {
         #   name = "Papirus-Dark";

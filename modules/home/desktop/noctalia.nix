@@ -20,12 +20,12 @@
             density = "default";
             showOutline = false;
             showCapsule = true;
-            capsuleOpacity = 1;
+            # capsuleOpacity = 1;
             capsuleColorKey = "none";
             widgetSpacing = 6;
             contentPadding = 0;
             fontScale = 1;
-            backgroundOpacity = 0.93;
+            # backgroundOpacity = 0.93;
             useSeparateOpacity = false;
             floating = false;
             marginVertical = 4;

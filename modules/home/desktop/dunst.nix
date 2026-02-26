@@ -34,7 +34,7 @@
             # Defines color of the frame around the notification window.
             # frame_color = "#ebdbb2";
 
-            font = "JetBrainsMono Nerd Font 11";
+            # font = "JetBrainsMono Nerd Font 11";
 
             format = "%s %p\\n%b";
 
@@ -53,7 +53,7 @@
           urgency_normal = { };
 
           urgency_critical = {
-            frame_color = "#cc241d";
+            # frame_color = "#cc241d";
             timeout = 0;
           };
         };
