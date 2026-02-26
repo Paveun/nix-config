@@ -13,19 +13,18 @@
     gtk
     kanshi
     keyring
-    wofi
     # streaming
     # sway
     # swaylock
     udiskie
-    waybar
     wayland
     # zathura
     zed-editor
+    # waybar
     # walker
-    gazelle
-    wofi
-    hyprland
+    # gazelle
+    # wofi
+    # hyprland
     niri
     noctalia
   ];
