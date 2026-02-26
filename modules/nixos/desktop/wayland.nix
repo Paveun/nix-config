@@ -4,6 +4,8 @@
     {
       users.users.${primaryUser}.extraGroups = [ "video" ];
 
+      programs.dconf.enable = true;
+
       security.polkit.enable = true;
 
       # programs.sway = {

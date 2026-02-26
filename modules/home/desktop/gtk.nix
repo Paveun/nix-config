@@ -13,6 +13,11 @@
       };
     in
     {
+      dconf.settings = {
+        "org/gnome/desktop/interface" = {
+          color-scheme = "prefer-dark";
+        };
+      };
       home.pointerCursor = {
         gtk.enable = true;
         enable = true;
@@ -37,7 +42,7 @@
         };
 
         theme = {
-          name = "rose-pine-gtk";
+          name = "rose-pine";
           package = pkgs.rose-pine-gtk-theme;
         };
 

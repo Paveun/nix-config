@@ -4,7 +4,7 @@
       hotkey-overlay.skip-at-startup = true;
       environment = {
         # Dark theme
-        GTK_THEME = "Adwaita:dark";
+        # GTK_THEME = "Adwaita:dark";
 
         # Wayland
         GDK_SCALE = "1";
