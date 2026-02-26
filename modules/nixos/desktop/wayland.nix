@@ -41,7 +41,7 @@
       };
 
       services = {
-        displayManager.defaultSession = "hyprland";
+        displayManager.defaultSession = "niri";
 
         libinput.enable = true;
         xserver.xkb.layout = "us";

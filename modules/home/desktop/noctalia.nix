@@ -84,7 +84,7 @@
             };
             screenOverrides = [ ];
           };
-          # colorSchemes.predefinedScheme = "Monochrome";
+          colorSchemes.predefinedScheme = "Catppuccin";
           # general = {
           #   avatarImage = "/home/drfoobar/.face";
           #   radiusRatio = 0.2;
@@ -98,7 +98,7 @@
       };
       home.file.".cache/noctalia/wallpapers.json" = {
         text = builtins.toJSON {
-          defaultWallpaper = "./wallpaper.png";
+          defaultWallpaper = "${./wallpaper.png}";
           # wallpapers = {
           #   "DP-1" = "/path/to/monitor/wallpaper.png";
           # };
