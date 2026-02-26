@@ -39,7 +39,7 @@
           hyprlock.enable = false;
           nixvim.enable = false;
           zed.enable = false;
-          noctalia-shell.enable = false;
+          # noctalia-shell.enable = false;
         };
       };
     };
