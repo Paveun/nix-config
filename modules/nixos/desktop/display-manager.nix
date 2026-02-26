@@ -13,7 +13,7 @@
         enable = true;
         wayland.enable = true;
         autoNumlock = true;
-        # theme = "Elegant";
+        theme = "Elegant";
         extraPackages = [ themePackage ];
       };
       environment.systemPackages = [ themePackage ];
