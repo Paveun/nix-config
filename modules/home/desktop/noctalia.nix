@@ -32,7 +32,7 @@
             marginHorizontal = 4;
             frameThickness = 8;
             frameRadius = 12;
-            outerCorners = true;
+            outerCorners = false;
             hideOnOverview = false;
             displayMode = "always_visible";
             autoHideDelay = 500;

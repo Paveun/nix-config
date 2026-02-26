@@ -9,8 +9,8 @@
         "HYPRCURSOR_SIZE,24"
 
         # Cursor theme
-        "XCURSOR_THEME,Numix-Cursor-Ligh"
-        "HYPRCURSOR_THEME,Numix-Cursor-Ligh"
+        "XCURSOR_THEME,Numix-Cursor-Light"
+        "HYPRCURSOR_THEME,Numix-Cursor-Light"
 
         # Force all apps to use Wayland
         "GDK_BACKEND,wayland"
