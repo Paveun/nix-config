@@ -25,26 +25,12 @@
         QT_QPA_PLATFORMTHEME = "qt6ct";
       };
 
-      layout = {
-        focus-ring = {
-          enable = true;
-          width = 2;
-        };
+      debug = {
+        honor-xdg-activation-with-invalid-serial = [ ];
       };
 
       prefer-no-csd = true;
 
-      window-rules = [
-        {
-          geometry-corner-radius = {
-            top-left = 8.0;
-            top-right = 8.0;
-            bottom-left = 8.0;
-            bottom-right = 8.0;
-          };
-          clip-to-geometry = true;
-        }
-      ];
     };
   };
 }
