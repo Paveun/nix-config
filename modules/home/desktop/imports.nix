@@ -26,5 +26,7 @@
     gazelle
     wofi
     hyprland
+    niri
+    noctalia
   ];
 }

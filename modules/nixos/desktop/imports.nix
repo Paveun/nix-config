@@ -10,5 +10,7 @@
     thunar
     protonvpn
     containers
+    niri
+    noctalia
   ];
 }
