@@ -6,6 +6,9 @@
         # Dark theme
         # GTK_THEME = "Adwaita:dark";
 
+        # X11 (xwayland-satellite)
+        DISPLAY = ":0";
+
         # Wayland
         GDK_SCALE = "1";
         XCURSOR_SIZE = "24";
