@@ -41,6 +41,14 @@
           # xdg-desktop-portal-gnome
           xdg-desktop-portal-gtk
         ];
+        config = {
+          niri = {
+            default = [ "gtk" ];
+          };
+          common = {
+            default = [ "gtk" ];
+          };
+        };
       };
 
       services = {
