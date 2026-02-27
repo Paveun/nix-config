@@ -19,6 +19,7 @@
         slack
         google-chrome
         gemini-cli
+        localsend
       ];
     };
 }
