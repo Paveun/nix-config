@@ -51,13 +51,19 @@
         with config.lib.niri.actions;
         {
           # ── Applications ──────────────────────────────────────────
+          "Mod+Return".hotkey-overlay.title = "Open Terminal";
           "Mod+Return".action.spawn = "${ghostty}";
+          "Mod+F".hotkey-overlay.title = "Open File Manager";
           "Mod+F".action.spawn = "thunar";
 
           # ── Noctalia integration ──────────────────────────────────
+          "Mod+Space".hotkey-overlay.title = "Toggle Launcher";
           "Mod+Space".action.spawn = noctalia "launcher toggle";
+          "Mod+P".hotkey-overlay.title = "Toggle Session Menu";
           "Mod+P".action.spawn = noctalia "sessionMenu toggle";
+          "Mod+L".hotkey-overlay.title = "Lock Screen";
           "Mod+L".action.spawn = noctalia "lockScreen lock";
+          "Mod+Shift+I".hotkey-overlay.title = "Toggle Keep Awake";
           "Mod+Shift+I".action.spawn = noctalia "idleInhibitor toggle";
 
           # ── Window management ─────────────────────────────────────
@@ -113,11 +119,15 @@
           "Mod+Shift+E".action.quit.skip-confirmation = true;
 
           # ── Volume (via noctalia) ─────────────────────────────────
+          "XF86AudioRaiseVolume".hotkey-overlay.title = "Volume Up";
           "XF86AudioRaiseVolume".action.spawn = noctalia "volume increase";
+          "XF86AudioLowerVolume".hotkey-overlay.title = "Volume Down";
           "XF86AudioLowerVolume".action.spawn = noctalia "volume decrease";
+          "XF86AudioMute".hotkey-overlay.title = "Toggle Mute";
           "XF86AudioMute".action.spawn = noctalia "volume muteOutput";
 
           # ── Brightness ────────────────────────────────────────────
+          "XF86MonBrightnessUp".hotkey-overlay.title = "Brightness Up";
           "XF86MonBrightnessUp".action.spawn = [
             "${brightnessctl}"
             "-e4"
@@ -125,6 +135,7 @@
             "set"
             "5%+"
           ];
+          "XF86MonBrightnessDown".hotkey-overlay.title = "Brightness Down";
           "XF86MonBrightnessDown".action.spawn = [
             "${brightnessctl}"
             "-e4"
@@ -134,18 +145,22 @@
           ];
 
           # ── Media controls ────────────────────────────────────────
+          "XF86AudioNext".hotkey-overlay.title = "Next Track";
           "XF86AudioNext".action.spawn = [
             "${playerctl}"
             "next"
           ];
+          "XF86AudioPrev".hotkey-overlay.title = "Previous Track";
           "XF86AudioPrev".action.spawn = [
             "${playerctl}"
             "previous"
           ];
+          "XF86AudioPlay".hotkey-overlay.title = "Play / Pause";
           "XF86AudioPlay".action.spawn = [
             "${playerctl}"
             "play-pause"
           ];
+          "XF86AudioPause".hotkey-overlay.title = "Play / Pause";
           "XF86AudioPause".action.spawn = [
             "${playerctl}"
             "play-pause"
