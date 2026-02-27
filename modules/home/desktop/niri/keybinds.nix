@@ -14,6 +14,7 @@
       brightnessctl = getExe pkgs.brightnessctl;
       playerctl = getExe pkgs.playerctl;
       noctalia-shell = getExe config.programs.noctalia-shell.package;
+      thunar = getExe pkgs.thunar;
       noctalia =
         cmd:
         [
@@ -52,9 +53,9 @@
         {
           # ── Applications ──────────────────────────────────────────
           "Mod+Return".hotkey-overlay.title = "Open Terminal";
-          "Mod+Return".action.spawn = "${ghostty}";
+          "Mod+Return".action.spawn = ghostty;
           "Mod+F".hotkey-overlay.title = "Open File Manager";
-          "Mod+F".action.spawn = "thunar";
+          "Mod+F".action.spawn = thunar;
 
           # ── Noctalia integration ──────────────────────────────────
           "Mod+Space".hotkey-overlay.title = "Toggle Launcher";
