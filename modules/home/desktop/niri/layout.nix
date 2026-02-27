@@ -6,6 +6,11 @@
       #   width = 2;
       # };
 
+      border = {
+        enable = true;
+        width = 2;
+      };
+
       gaps = 16; # Gap between windows
       center-focused-column = "never"; # Don’t auto-center focused column
 
