@@ -8,19 +8,20 @@
     }:
 
     let
-      noctalia =
-        cmd:
-        [
-          "noctalia-shell"
-          "ipc"
-          "call"
-        ]
-        ++ (pkgs.lib.splitString " " cmd);
 
       inherit (lib) getExe getExe';
       ghostty = getExe config.programs.ghostty.package;
       brightnessctl = getExe pkgs.brightnessctl;
       playerctl = getExe pkgs.playerctl;
+      noctalia-shell = getExe config.programs.noctalia-shell.package;
+      noctalia =
+        cmd:
+        [
+          "${noctalia-shell}"
+          "ipc"
+          "call"
+        ]
+        ++ (pkgs.lib.splitString " " cmd);
 
       # Generate workspace keybinds for 1-9
       workspaceBinds = builtins.listToAttrs (
