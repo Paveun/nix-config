@@ -58,6 +58,7 @@
           "Mod+Space".action.spawn = noctalia "launcher toggle";
           "Mod+P".action.spawn = noctalia "sessionMenu toggle";
           "Mod+L".action.spawn = noctalia "lockScreen lock";
+          "Mod+Shift+I".action.spawn = noctalia "idleInhibitor toggle";
 
           # ── Window management ─────────────────────────────────────
           "Mod+W".action = close-window;
