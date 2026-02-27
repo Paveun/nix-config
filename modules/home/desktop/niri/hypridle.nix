@@ -7,8 +7,15 @@
       ...
     }:
     let
-      inherit (lib) getExe;
+      inherit (lib) getExe getExe';
       brightnessctl = getExe pkgs.brightnessctl;
+      dim-screen = getExe' (pkgs.writeShellScriptBin "dim-screen" ''
+        ${brightnessctl} -s
+        current=$(${brightnessctl} g)
+        dimmed=$((current * 30 / 100))
+        [ "$dimmed" -lt 1 ] && dimmed=1
+        ${brightnessctl} s "$dimmed"
+      '') "dim-screen";
       noctalia-shell = getExe config.programs.noctalia-shell.package;
       noctalia = cmd: "${noctalia-shell} ipc call ${cmd}";
       niri = getExe config.programs.niri.package;
@@ -18,7 +25,7 @@
         enable = true;
         settings = {
           general = {
-            lock_cmd = noctalia "lockScreen toggle";
+            lock_cmd = noctalia "lockScreen lock";
             before_sleep_cmd = "loginctl lock-session";
             after_sleep_cmd = "${niri} msg action power-on-monitors";
           };
@@ -26,8 +33,8 @@
             {
               # dim screen before lock
               timeout = 240;
-              on-timeout = "${brightnessctl} -s set 80%-";
-              on-resume = "${niri} msg action power-on-monitors && ${brightnessctl} -r";
+              on-timeout = dim-screen;
+              on-resume = "${brightnessctl} -r";
             }
             {
               timeout = 300;
