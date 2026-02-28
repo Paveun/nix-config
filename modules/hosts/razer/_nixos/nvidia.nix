@@ -1,6 +1,7 @@
+{ lib, ... }:
 {
   hardware.nvidia = {
-    open = false;
+    open = lib.mkForce false;
     prime = {
       # offload.enable = true;
       # offload.enableOffloadCmd = true;
