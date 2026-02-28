@@ -68,6 +68,7 @@
 
     hytale-launcher = {
       url = "github:JPyke3/hytale-launcher-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     gazelle = {

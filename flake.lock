@@ -419,7 +419,9 @@
     },
     "hytale-launcher": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1771967346,
@@ -671,22 +673,6 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1771848320,
-        "narHash": "sha256-0MAd+0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "2fc6539b481e1d2569f25f8799236694180c0993",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_5": {
-      "locked": {
         "lastModified": 1761236834,
         "narHash": "sha256-+pthv6hrL5VLW2UqPdISGuLiUZ6SnAXdd2DdUE+fV2Q=",
         "owner": "nixos",
@@ -701,7 +687,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1771848320,
         "narHash": "sha256-0MAd+0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU=",
@@ -747,11 +733,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1772295408,
-        "narHash": "sha256-uu7OH5KuWHCEURPbyTQzaRkGrJ4wXcpjb0Bk7jd5tP8=",
+        "lastModified": 1772316050,
+        "narHash": "sha256-YbU3d88p6Nx4NqieJG9L6kUANSt/exMlV381jtyxaqo=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "3bc578526fcafc8bc9db936de62c331cb882843f",
+        "rev": "9596db0b399deebd62746c2ce6015bd24c3acc95",
         "type": "github"
       },
       "original": {
@@ -841,7 +827,7 @@
         "librepods": "librepods",
         "niri": "niri",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_5",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixvim": "nixvim",
         "noctalia": "noctalia",
@@ -1042,7 +1028,7 @@
     },
     "treefmt-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1762938485,
