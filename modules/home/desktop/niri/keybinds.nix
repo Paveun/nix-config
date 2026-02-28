@@ -13,12 +13,12 @@
       ghostty = getExe config.programs.ghostty.package;
       brightnessctl = getExe pkgs.brightnessctl;
       playerctl = getExe pkgs.playerctl;
-      # noctalia-shell = getExe config.programs.noctalia-shell.package;
+      noctalia-shell = getExe config.programs.noctalia-shell.package;
       thunar = getExe pkgs.thunar;
       noctalia =
         cmd:
         [
-          "noctalia-shell"
+          noctalia-shell
           "ipc"
           "call"
         ]
