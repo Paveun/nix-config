@@ -25,6 +25,7 @@
     # gazelle
     # wofi
     # hyprland
+    librepods
     niri
     noctalia
   ];

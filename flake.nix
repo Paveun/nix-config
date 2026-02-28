@@ -73,6 +73,11 @@
     gazelle = {
       url = "github:Zeus-Deus/gazelle-tui";
     };
+
+    librepods = {
+      url = "github:kavishdevar/librepods/linux/rust";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
