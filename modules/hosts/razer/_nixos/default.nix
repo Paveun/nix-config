@@ -2,7 +2,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware.nix
-    ./gaming.nix
+    # ./gaming.nix
     ./nvidia.nix
   ];
 

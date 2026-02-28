@@ -10,6 +10,7 @@
       desktop
       dev
       nvidia
+      gaming
     ]);
 
     homeManagerModules = [
@@ -17,6 +18,7 @@
     ]
     ++ (with config.flake.modules.homeManager; [
       desktop
+      gaming
     ]);
   };
 }

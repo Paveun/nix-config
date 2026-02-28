@@ -66,6 +66,10 @@
       url = "github:ghostty-org/ghostty";
     };
 
+    hytale-launcher = {
+      url = "github:JPyke3/hytale-launcher-nix";
+    };
+
     gazelle = {
       url = "github:Zeus-Deus/gazelle-tui";
     };
