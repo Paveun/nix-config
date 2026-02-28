@@ -10,7 +10,7 @@
         # client connected to *that window*. Much more reasonable.
         aggressiveResize = true;
 
-        clock24 = true;
+        clock24 = false;
 
         # Allows for faster key repetition
         escapeTime = 50;
