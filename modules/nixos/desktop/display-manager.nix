@@ -14,7 +14,16 @@
         wayland.enable = true;
         autoNumlock = true;
         theme = "Elegant";
-        extraPackages = [ themePackage ];
+        extraPackages = [
+          themePackage
+          pkgs.numix-cursor-theme
+        ];
+        settings = {
+          Theme = {
+            CursorTheme = "Numix-Cursor-Light";
+            CursorSize = 24;
+          };
+        };
       };
       environment.systemPackages = [ themePackage ];
       # services.displayManager.gdm.enable = true;
