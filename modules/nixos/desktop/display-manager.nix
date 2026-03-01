@@ -5,6 +5,11 @@
       themePackage = pkgs.elegant-sddm.override {
         themeConfig.General.background = pkgs.nixos-artwork.wallpapers.nineish-dark-gray.gnomeFilePath;
       };
+      # cursorTheme = {
+      #   name = "Bibata-Modern-Classic";
+      #   package = pkgs.bibata-cursors;
+      #   size = 24;
+      # };
     in
     {
       # The theme should be in both sddm.extraPackages and environment.systemPackages.
@@ -16,16 +21,19 @@
         theme = "Elegant";
         extraPackages = [
           themePackage
-          pkgs.numix-cursor-theme
+          # cursorTheme.package
         ];
-        settings = {
-          Theme = {
-            CursorTheme = "Numix-Cursor-Light";
-            CursorSize = 24;
-          };
-        };
+        # settings = {
+        #   Theme = {
+        #     CursorTheme = cursorTheme.name;
+        #     CursorSize = cursorTheme.size;
+        #   };
+        # };
       };
-      environment.systemPackages = [ themePackage ];
+      environment.systemPackages = [
+        themePackage
+        # cursorTheme.package
+      ];
       # services.displayManager.gdm.enable = true;
     };
 }

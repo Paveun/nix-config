@@ -6,26 +6,28 @@
       config,
       ...
     }:
-    let
-      cursorTheme = {
-        name = "Numix-Cursor-Light";
-        package = pkgs.numix-cursor-theme;
-      };
-    in
+    # let
+    #   cursorTheme = {
+    #     name = "Bibata-Modern-Classic";
+    #     package = pkgs.bibata-cursors;
+    #     size = 24;
+    #   };
+    # in
     {
       # dconf.settings = {
       #   "org/gnome/desktop/interface" = {
       #     color-scheme = "prefer-dark";
       #   };
       # };
-      home.pointerCursor = {
-        gtk.enable = true;
-        enable = true;
-        inherit (cursorTheme)
-          name
-          package
-          ;
-      };
+      # home.pointerCursor = {
+      #   gtk.enable = true;
+      #   enable = true;
+      #   inherit (cursorTheme)
+      #     name
+      #     package
+      #     size
+      #     ;
+      # };
 
       # Prevents GTK from saving "recently accessed files"
       xdg.dataFile."recently-used.xbel" = {
@@ -51,7 +53,7 @@
         #   package = pkgs.papirus-icon-theme;
         # };
 
-        inherit cursorTheme;
+        # inherit cursorTheme;
 
         gtk3.bookmarks = [
           "file://${config.xdg.userDirs.download}"

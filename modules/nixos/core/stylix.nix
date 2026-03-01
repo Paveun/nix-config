@@ -31,6 +31,11 @@
             name = "Noto Color Emoji";
           };
         };
+        cursor = {
+          name = "Bibata-Modern-Classic";
+          package = pkgs.bibata-cursors;
+          size = 20;
+        };
         icons = {
           enable = true;
           package = pkgs.papirus-icon-theme;
