@@ -30,7 +30,7 @@
         cursor = {
           name = "Bibata-Modern-Classic";
           package = pkgs.bibata-cursors;
-          size = 20;
+          size = 24;
         };
         icons = {
           enable = true;
@@ -39,7 +39,7 @@
           dark = "Papirus-Dark";
         };
         targets = {
-          ghostty.enable = false;
+          # ghostty.enable = false;
           firefox.enable = false;
           hyprlock.enable = false;
           nixvim.enable = false;
