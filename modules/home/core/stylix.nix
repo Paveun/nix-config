@@ -9,7 +9,12 @@
         polarity = "dark";
 
         fonts = {
-          sizes.applications = 11;
+          sizes = {
+            applications = 11;
+            desktop = 11;
+            popups = 10;
+            terminal = 11;
+          };
           monospace = {
             name = "JetBrainsMono Nerd Font";
             package = pkgs.nerd-fonts.jetbrains-mono;
@@ -43,7 +48,7 @@
           firefox.enable = false;
           hyprlock.enable = false;
           nixvim.enable = false;
-          zed.enable = false;
+          zed.fonts.override.sizes.terminal = 10;
           # noctalia-shell.enable = false;
         };
       };

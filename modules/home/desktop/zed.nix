@@ -20,8 +20,8 @@
             provider = "copilot";
           };
           buffer_font_weight = 300.0;
-          buffer_font_size = 13.0;
-          buffer_font_family = "JetBrainsMono Nerd Font";
+          # buffer_font_size = 13.0;
+          # buffer_font_family = "JetBrainsMono Nerd Font";
           # vim_mode = true;
         };
       };
