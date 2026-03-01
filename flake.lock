@@ -122,6 +122,26 @@
         "type": "github"
       }
     },
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771881364,
+        "narHash": "sha256-A5uE/hMium5of/QGC6JwF5TGoDAfpNtW00T0s9u/PN8=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "a4cb7bf73f264d40560ba527f9280469f1f081c6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -818,6 +838,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "compose2nix": "compose2nix",
+        "disko": "disko",
         "flake-parts": "flake-parts",
         "gazelle": "gazelle",
         "ghostty": "ghostty",

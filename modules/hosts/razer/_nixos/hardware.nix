@@ -26,29 +26,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
-  boot.initrd.luks.devices."luks-8478ff39-fc65-4f22-bd47-930850d0e112".device =
-      "/dev/disk/by-uuid/8478ff39-fc65-4f22-bd47-930850d0e112";
-
-  fileSystems."/" = {
-    device = "/dev/mapper/luks-7b503347-0069-4322-a287-eb9ee50a3cff";
-    fsType = "ext4";
-  };
-
-  boot.initrd.luks.devices."luks-7b503347-0069-4322-a287-eb9ee50a3cff".device =
-    "/dev/disk/by-uuid/7b503347-0069-4322-a287-eb9ee50a3cff";
-
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/45EE-9772";
-    fsType = "vfat";
-    options = [
-      "fmask=0077"
-      "dmask=0077"
-    ];
-  };
-
-  swapDevices = [
-    { device = "/dev/mapper/luks-8478ff39-fc65-4f22-bd47-930850d0e112"; }
-  ];
+  # fileSystems, swapDevices, and boot.initrd.luks.devices are now managed by disko
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
