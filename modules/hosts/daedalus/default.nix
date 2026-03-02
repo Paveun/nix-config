@@ -7,6 +7,7 @@
         nix.settings.max-jobs = 8;
         programs.starship.settings.hostname.style = "bold purple";
       }
+      ./_home
     ];
   };
 }
