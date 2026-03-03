@@ -19,16 +19,16 @@
   boot.loader.limine.extraEntries = ''
     /Windows
         protocol: efi
-        path: guid(REPLACE-WITH-WINDOWS-ESP-PARTUUID):/EFI/Microsoft/Boot/bootmgfw.efi
+        path: guid(5cede495-b0bb-45bc-b761-000a9c9e964e):/EFI/Microsoft/Boot/bootmgfw.efi
   '';
 
   # Optional: mount the data SSD (not managed by disko)
   # Find the device with: ls -l /dev/disk/by-id/ | grep nvme
-  # fileSystems."/mnt/data" = {
-  #   device = "/dev/disk/by-id/REPLACE-WITH-DATA-SSD-DISK-ID-part1";
-  #   fsType = "ext4"; # or "ntfs-3g", "btrfs", etc.
-  #   options = [ "defaults" "nofail" ];
-  # };
+  fileSystems."/mnt/vault" = {
+    device = "/dev/disk/by-id/ata-Samsung_SSD_860_EVO_2TB_S597NJ0NB07777B-part1";
+    fsType = "ext4";
+    options = [ "defaults" "nofail" ];
+  };
 
   system.stateVersion = "24.05";
 }

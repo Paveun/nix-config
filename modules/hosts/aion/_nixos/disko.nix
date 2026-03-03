@@ -3,7 +3,7 @@
     disk.main = {
       type = "disk";
       # Find disk id with: ls -l /dev/disk/by-id/ | grep nvme
-      device = "/dev/disk/by-id/REPLACE-WITH-ARCH-SSD-DISK-ID";
+      device = "/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_2TB_S7KHNU0X415948L";
       content = {
         type = "gpt";
         partitions = {
