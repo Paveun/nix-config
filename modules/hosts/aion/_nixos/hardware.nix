@@ -20,14 +20,15 @@
     "xhci_pci"
     "nvme"
     "usbhid"
-    "usb_storage"
+    # "usb_storage"
     "sd_mod"
+    "ahci"
   ];
   boot.initrd.kernelModules = [ "dm-snapshot" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   # fileSystems, swapDevices, and boot.initrd.luks.devices are now managed by disko
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
