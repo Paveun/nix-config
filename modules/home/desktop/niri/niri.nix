@@ -1,6 +1,7 @@
 {
   flake.modules.homeManager.niri = {
     programs.niri.settings = {
+      gestures.hot-corners.enable = false;
       hotkey-overlay.skip-at-startup = true;
       environment = {
         # Dark theme
