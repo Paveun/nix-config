@@ -3,7 +3,6 @@
     # Include the results of the hardware scan.
     ./disko.nix
     ./hardware.nix
-    # ./gaming.nix
     ./nvidia.nix
   ];
 
