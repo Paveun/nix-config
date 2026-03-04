@@ -8,11 +8,11 @@
       # sudo.enable = false;
       sudo = {
         enable = true;
-        wheelNeedsPassword = true;
+        wheelNeedsPassword = false;
       };
       doas = {
         enable = false;
-        wheelNeedsPassword = true;
+        wheelNeedsPassword = false;
       };
     };
   };
