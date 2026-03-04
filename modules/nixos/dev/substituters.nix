@@ -1,6 +1,11 @@
 let
   substituters = [
     {
+      url = "https://paveun.cachix.org";
+      publicKey = "paveun.cachix.org-1:jZvBM/Bhng1l6+8pJTDFOEi7ym4liM03m+S2UKigzuM=";
+      priority = 0;
+    }
+    {
       url = "https://cache.nixos.org";
       publicKey = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=";
       priority = 1;
