@@ -9,7 +9,7 @@
         enable = true;
         flavor = "mocha";
         firefox.enable = false;
-        ghostty.enable = false;
+        # ghostty.enable = false;
         hyprlock.enable = false;
       };
     };
