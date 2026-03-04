@@ -364,11 +364,11 @@
         "zon2nix": "zon2nix"
       },
       "locked": {
-        "lastModified": 1772571104,
-        "narHash": "sha256-npXg/S8c28tjxTAlNlTMcCCc26so0UR+rLyYzqOcSkk=",
+        "lastModified": 1772597284,
+        "narHash": "sha256-oWMWZmD0iH1RgivYXRTtpkgF3T55T5JNB2uF/JZvSCM=",
         "owner": "ghostty-org",
         "repo": "ghostty",
-        "rev": "ee4c6f88c5517d242b73427f66da4d54d41e35a8",
+        "rev": "619e33a4febec871c0d655f51d85e7f5f21ba289",
         "type": "github"
       },
       "original": {
@@ -753,11 +753,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1772565447,
-        "narHash": "sha256-3oPgLP54zZyAMomElJz5FwlGgA6caW4v4rI2lC5WqvY=",
+        "lastModified": 1772589145,
+        "narHash": "sha256-p4Top4gFt0K78xkPdsJVhljeiE91hyAUzD3x5xZZ88A=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "ba5f933c582080083f849dcd52fa19133d83b85a",
+        "rev": "92161fa136ec7fd135fad9c23616066f6bfc6e66",
         "type": "github"
       },
       "original": {
