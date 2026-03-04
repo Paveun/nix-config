@@ -14,6 +14,12 @@
         };
         polarity = "dark";
         fonts = {
+          sizes = {
+            applications = 11;
+            desktop = 11;
+            popups = 10;
+            terminal = 10;
+          };
           monospace = {
             name = "JetBrainsMono Nerd Font";
             package = pkgs.nerd-fonts.jetbrains-mono;

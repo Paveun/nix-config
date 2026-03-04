@@ -13,7 +13,7 @@
             applications = 11;
             desktop = 11;
             popups = 10;
-            terminal = 11;
+            terminal = 10;
           };
           monospace = {
             name = "JetBrainsMono Nerd Font";
