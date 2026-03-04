@@ -13,6 +13,7 @@
         # systemd.enable = true;
         settings = {
           settingsVersion = 0;
+          network.bluetoothAutoConnect = false;
           bar = {
             barType = "simple";
             position = "top";
@@ -84,7 +85,7 @@
             };
             screenOverrides = [ ];
           };
-          colorSchemes.predefinedScheme = "Catppuccin";
+          # colorSchemes.predefinedScheme = "Catppuccin";
           # general = {
           #   avatarImage = "/home/drfoobar/.face";
           #   radiusRatio = 0.2;
