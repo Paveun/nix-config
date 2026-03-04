@@ -1,4 +1,7 @@
 name: Update Flake and Verify Linux
+permissions:
+  contents: write
+  pull-requests: write
 on:
   schedule:
     - cron: "0 0 * * *" # Daily at midnight
