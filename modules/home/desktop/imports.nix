@@ -9,6 +9,7 @@
     flameshot
     foot
     discord
+    vesktop
     # gammastep
     gtk
     kanshi
