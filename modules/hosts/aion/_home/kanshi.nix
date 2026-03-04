@@ -7,7 +7,7 @@
       scale = 1.0;
     };
     _profiles.desktop = {
-      wifi = false;
+      wifi = true;
       screens.alienware.status = "enable";
     };
   };
