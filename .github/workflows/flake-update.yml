@@ -1,32 +1,32 @@
 name: Update Flake
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 0 * * *" # Runs daily at midnight UTC
+  workflow_dispatch: # Allows you to trigger it manually
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@v16
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v16
 
       - name: Update flake.lock and Create PR
         id: update
         uses: DeterminateSystems/update-flake-lock@v24
         with:
-          # Using your PAT allows the PR to trigger the 'check.yml' workflow
           token: ${{ secrets.PAT_TOKEN }}
           pr-title: "chore: flake update"
 
-      - name: Setup Cachix
-        uses: cachix/cachix-action@v15
-        with:
-          name: paveun # REPLACE with your actual cache name
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-
-      - name: Verify aion
-        run: nix build .#nixosConfigurations.aion.config.system.build.toplevel --max-jobs 1
-
-      - name: Verify razer
-        run: nix build .#nixosConfigurations.razer.config.system.build.toplevel --max-jobs 1
+      - name: Enable Auto-Merge
+        # Triggers whether it's a brand new PR or just adding new commits to yesterday's open PR
+        if: steps.update.outputs.pull-request-operation == 'created' || steps.update.outputs.pull-request-operation == 'updated'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          echo "Giving GitHub 5 seconds to register the Ruleset for this PR..."
+          sleep 5
+          gh pr merge --auto --squash "${{ steps.update.outputs.pull-request-number }}"
