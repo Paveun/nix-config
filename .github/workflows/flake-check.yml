@@ -6,6 +6,7 @@ jobs:
   verify-hosts:
     strategy:
       fail-fast: false # If aion fails, don't cancel razer; let both finish
+      max-parallel: 1
       matrix:
         host: [aion, razer]
     runs-on: ubuntu-latest
