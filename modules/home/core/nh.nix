@@ -10,7 +10,7 @@
       programs.nh = {
         enable = true;
 
-        flake = "/home/paveun/nix-config";
+        flake = "github:Paveun/nix-config";
 
         clean = {
           enable = true;
