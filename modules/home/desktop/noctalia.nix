@@ -85,6 +85,7 @@
             };
             screenOverrides = [ ];
           };
+          wallpaper.enabled = false;
           # colorSchemes.predefinedScheme = "Catppuccin";
           # general = {
           #   avatarImage = "/home/drfoobar/.face";
@@ -97,13 +98,13 @@
         };
         # this may also be a string or a path to a JSON file.
       };
-      home.file.".cache/noctalia/wallpapers.json" = {
-        text = builtins.toJSON {
-          defaultWallpaper = "${./wallpaper.png}";
-          # wallpapers = {
-          #   "DP-1" = "/path/to/monitor/wallpaper.png";
-          # };
-        };
-      };
+      # home.file.".cache/noctalia/wallpapers.json" = {
+      #   text = builtins.toJSON {
+      #     defaultWallpaper = "${./wallpaper.png}";
+      #     # wallpapers = {
+      #     #   "DP-1" = "/path/to/monitor/wallpaper.png";
+      #     # };
+      #   };
+      # };
     };
 }

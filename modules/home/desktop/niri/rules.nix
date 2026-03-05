@@ -18,6 +18,9 @@
             {
               namespace = "^noctalia-wallpaper*";
             }
+            {
+              namespace = "^wallpaper$";
+            }
           ];
           place-within-backdrop = true;
         }
