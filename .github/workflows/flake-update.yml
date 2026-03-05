@@ -19,9 +19,14 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           pr-title: "chore: flake update"
 
-      - name: Enable Auto-Merge
-        # This tells GitHub to merge it once the checks (from the next file) pass
-        if: steps.update.outputs.pull-request-operation == 'created'
-        run: gh pr merge --auto --squash "${{ steps.update.outputs.pull-request-number }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: paveun # REPLACE with your actual cache name
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+
+      - name: Verify aion
+        run: nix build .#nixosConfigurations.aion.config.system.build.toplevel --max-jobs 1
+
+      - name: Verify razer
+        run: nix build .#nixosConfigurations.razer.config.system.build.toplevel --max-jobs 1
