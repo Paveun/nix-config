@@ -6,7 +6,7 @@
     obs
     printing
     sound
-    elephant
+    # elephant
     thunar
     protonvpn
     containers
