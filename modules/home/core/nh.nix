@@ -4,7 +4,7 @@
     {
       home.shellAliases = {
         u = nhSwitchCommand;
-        uu = "${nhSwitchCommand} --update";
+        # uu = "${nhSwitchCommand} --update";
       };
 
       programs.nh = {
