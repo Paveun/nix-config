@@ -9,7 +9,7 @@
     ++ (with config.flake.modules.nixos; [
       desktop
       dev
-      nvidia
+      amdgpu
       gaming
     ]);
 
