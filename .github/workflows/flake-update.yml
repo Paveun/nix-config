@@ -29,4 +29,4 @@ jobs:
         run: |
           echo "Giving GitHub 5 seconds to register the Ruleset for this PR..."
           sleep 5
-          gh pr merge --auto --squash --delete-branch "${{ steps.update.outputs.pull-request-number }}"
+          gh pr merge --auto --squash "${{ steps.update.outputs.pull-request-number }}"
