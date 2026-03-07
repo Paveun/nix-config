@@ -2,7 +2,7 @@
   flake.modules.homeManager.desktop-programs =
     { pkgs, inputs, ... }:
     {
-      programs.nheko.enable = true;
+      programs.element-desktop.enable = true;
 
       home.packages = with pkgs; [
         inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
