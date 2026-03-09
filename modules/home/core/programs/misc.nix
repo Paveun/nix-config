@@ -25,6 +25,7 @@
           wget
           nil
           nixd
+          devenv
 
           # Network
           dig
