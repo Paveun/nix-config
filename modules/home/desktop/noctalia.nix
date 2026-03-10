@@ -85,7 +85,7 @@
             };
             screenOverrides = [ ];
           };
-          wallpaper.enabled = false;
+          wallpaper.enabled = true;
           # colorSchemes.predefinedScheme = "Catppuccin";
           # general = {
           #   avatarImage = "/home/drfoobar/.face";
@@ -94,6 +94,19 @@
           location = {
             monthBeforeDay = true;
             name = "Montreal, Canada";
+          };
+          idle = {
+            enabled = true;
+            screenOffTimeout = 300;
+            lockTimeout = 330;
+            suspendTimeout = 1800;
+            fadeDuration = 5;
+            # screenOffCommand = "";
+            # lockCommand = "";
+            # suspendCommand = "";
+            # resumeScreenOffCommand = "";
+            # resumeLockCommand = "";
+            # resumeSuspendCommand = "";
           };
         };
         # this may also be a string or a path to a JSON file.

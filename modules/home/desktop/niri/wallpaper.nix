@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.niri =
+  flake.modules.homeManager.niri-testing =
     { lib, pkgs, ... }:
     {
       systemd.user.services.swaybg = {
