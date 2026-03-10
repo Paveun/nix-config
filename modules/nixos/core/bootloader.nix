@@ -6,7 +6,7 @@
         loader = {
           limine = {
             enable = true;
-            maxGenerations = 15;
+            maxGenerations = 10;
           };
 
           efi.canTouchEfiVariables = true;
