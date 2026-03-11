@@ -1,6 +1,11 @@
 {
   flake.modules.homeManager.noctalia =
-    { pkgs, inputs, ... }:
+    {
+      pkgs,
+      inputs,
+      lib,
+      ...
+    }:
     {
       # import the home manager module
       imports = [
@@ -107,6 +112,12 @@
             # resumeScreenOffCommand = "";
             # resumeLockCommand = "";
             # resumeSuspendCommand = "";
+          };
+          appLauncher = {
+            useApp2Unit = false;
+            terminalCommand = "ghostty -e";
+            customLaunchPrefixEnabled = true;
+            customLaunchPrefix = "${lib.getExe pkgs.uwsm} app --";
           };
         };
         # this may also be a string or a path to a JSON file.
