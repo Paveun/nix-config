@@ -12,5 +12,6 @@
     stylix
     # catppuccin
     tailscale
+    overlays
   ];
 }
