@@ -23,6 +23,10 @@
           # buffer_font_size = 13.0;
           # buffer_font_family = "JetBrainsMono Nerd Font";
           # vim_mode = true;
+          terminal = {
+            font_family = "JetBrainsMono Nerd Font";
+            font_size = 13.0;
+          };
         };
       };
       home.packages = with pkgs; [
