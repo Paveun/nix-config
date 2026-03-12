@@ -1,7 +1,7 @@
-{ lib, ... }:
+{ lib, config, ... }:
 {
   hardware.nvidia = {
-    open = lib.mkForce false;
+    package = lib.mkForce config.boot.kernelPackages.nvidiaPackages.production;
     prime = {
       # offload.enable = true;
       # offload.enableOffloadCmd = true;
