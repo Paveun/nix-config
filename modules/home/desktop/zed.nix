@@ -1,6 +1,6 @@
 {
   flake.modules.homeManager.zed-editor =
-    { pkgs, ... }:
+    { pkgs, lib, ... }:
     {
       programs.zed-editor = {
         enable = true;
@@ -26,6 +26,7 @@
           terminal = {
             font_family = "JetBrainsMono Nerd Font";
             font_size = 13.0;
+            shell.program = lib.getExe pkgs.fish;
           };
         };
       };
