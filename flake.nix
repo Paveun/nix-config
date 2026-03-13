@@ -84,8 +84,6 @@
       url = "github:kavishdevar/librepods/linux/rust";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixpkgs-fflogs.url = "github:r-ryantm/nixpkgs/auto-update/fflogs";
   };
 
   outputs =
