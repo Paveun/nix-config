@@ -7,6 +7,10 @@
           limine = {
             enable = true;
             maxGenerations = 10;
+            style.interface = {
+              branding = "Paveun";
+              resolution = "max";
+            };
           };
 
           efi.canTouchEfiVariables = true;
