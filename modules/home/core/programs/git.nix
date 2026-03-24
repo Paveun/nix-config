@@ -1,67 +1,71 @@
 {
-  flake.modules.homeManager.core = { pkgs, ... }: {
-    programs = {
-      git = {
-        enable = true;
+  flake.modules.homeManager.core =
+    { pkgs, ... }:
+    {
+      programs = {
+        git = {
+          enable = true;
 
-        settings = {
-          user = {
-            email = "a.tresierrajansen@gmail.com";
-            name = "Paveun";
+          signing.format = null;
+
+          settings = {
+            user = {
+              email = "a.tresierrajansen@gmail.com";
+              name = "Paveun";
+            };
+
+            credential.helper = "!${pkgs.gh}/bin/gh auth git-credential";
+
+            core.editor = "nvim";
+            github.user = "Paveun";
+            mergetool.prompt = false;
+            pull.rebase = false;
           };
-
-          credential.helper = "!${pkgs.gh}/bin/gh auth git-credential";
-
-          core.editor = "nvim";
-          github.user = "Paveun";
-          mergetool.prompt = false;
-          pull.rebase = false;
         };
-      };
 
-      gh = {
-        enable = true;
+        gh = {
+          enable = true;
 
-        settings = {
-          git_protocol = "https";
+          settings = {
+            git_protocol = "https";
+          };
         };
-      };
 
-      lazygit = {
-        enable = true;
-        settings = {
-          gui = {
-            theme = {
-              activeBorderColor = [
-                "blue"
-                "bold"
-              ];
-              selectedLineBgColor = [ "white" ];
+        lazygit = {
+          enable = true;
+          settings = {
+            gui = {
+              theme = {
+                activeBorderColor = [
+                  "blue"
+                  "bold"
+                ];
+                selectedLineBgColor = [ "white" ];
+              };
+            };
+            git = {
+              # Improves performance
+              # https://github.com/jesseduffield/lazygit/issues/2875#issuecomment-1665376437
+              log.order = "default";
+
+              fetchAll = false;
             };
           };
-          git = {
-            # Improves performance
-            # https://github.com/jesseduffield/lazygit/issues/2875#issuecomment-1665376437
-            log.order = "default";
-
-            fetchAll = false;
-          };
         };
       };
-    };
 
-    home.shellAliases = {
-      lg = "lazygit";
+      home.shellAliases = {
+        lg = "lazygit";
 
-      gs = "git switch";
-      gsc = "git switch -c";
-      gfu = "git fetch upstream";
-      gfo = "git fetch origin";
-      gpc = "gh pr checkout";
-    };
+        gs = "git switch";
+        gsc = "git switch -c";
+        gfu = "git fetch upstream";
+        gfo = "git fetch origin";
+        gpc = "gh pr checkout";
+      };
 
-    programs.fish.shellAbbrs = {
-      B = "git checkout master || git checkout main && git pull && git checkout -b";
+      programs.fish.shellAbbrs = {
+        B = "git checkout master || git checkout main && git pull && git checkout -b";
+      };
     };
-  };
 }

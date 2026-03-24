@@ -19,6 +19,7 @@
 
         userDirs = {
           enable = true;
+          setSessionVariables = false;
         }
         // (lib.mapAttrs (_: folderName: "${config.home.homeDirectory}/${folderName}") {
           desktop = "desktop";

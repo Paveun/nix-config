@@ -55,6 +55,8 @@
 
         # inherit cursorTheme;
 
+        gtk4.theme = null;
+
         gtk3.bookmarks = [
           "file://${config.xdg.userDirs.download}"
           "file://${config.home.homeDirectory}/temp"
