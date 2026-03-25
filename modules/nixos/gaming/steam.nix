@@ -27,8 +27,8 @@
           capSysNice = false;
         };
       };
-      environment.systemPackages = with pkgs; [
-        gamescope-wsi
-      ];
+      # environment.systemPackages = with pkgs; [
+      #   gamescope-wsi
+      # ];
     };
 }
